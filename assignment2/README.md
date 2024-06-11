@@ -113,4 +113,64 @@ In the final chunk of code for this question we output the following:
     
      * with the document ID and the cosine similarity scores that correspond to the files
        
-     * with document names and the cosine similarity scores that correspond to the files  
+     * with document names and the cosine similarity scores that correspond to the files
+   
+ ### For each scoring scheme, provide a report stating the pros and cons of using that particular scheme to determine document relevance. 
+
+## Binary 
+
+Pros:  
+
+* Simple calculation  
+
+* Quicker processing time 
+
+Cons: 
+
+* TF-IDF score may not be as accurate as other schemes as we only use either 0 or 1 as the tf 
+
+## Raw Count 
+
+Pros: 
+
+* Simple calculation 
+
+* Uses the actual frequency of the terms in a document 
+
+Cons: 
+
+* Score may be skewed due to document length 
+
+## Term Frequency 
+
+Pros: 
+
+* Normalizes the scores by considering the number of words in the document 
+
+Cons: 
+
+* Takes a longer time to process as it must find all the terms in the documents 
+
+## Log Normalization 
+
+Pros: 
+
+* Simple calculation 
+
+* Reduces impact of high term frequency, so very common terms do not dominate 
+
+Cons: 
+
+* Log values may not be easily interpreted 
+
+## Double Normalization 
+
+Pros: 
+
+* Normalizes term frequency relative to the most frequent term so document size does not have as much impact 
+
+Cons: 
+
+* Takes longer time to process as it must find all the terms in the document and keep track of the highest frequency 
+
+* More complex calculation 
