@@ -1,5 +1,5 @@
 # Text Retrieval and Search Engine (CP423)
-### Assignment 2
+### Assignment 2 - Group 5
 ### Group Members:
 * Abigail Lee
 * Kayleigh Habib
