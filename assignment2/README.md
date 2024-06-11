@@ -1,6 +1,12 @@
 ## Preprocessing Steps / How to Run the File 
 
- 
+ # To get the TF-IDF Matrix 
+
+* The user will be prompted to enter a query up to 5 words and select enter. 
+
+* The user will be prompted to enter a desired weighting scheme (from 1 – 5) and select enter. 
+
+* Once processed, the TF-IDF Matrix, the list of top 5 relevant documents with document IDs, and the list of top 5 relevant documents with document names will be outputted along with their TF-IDF scores. 
 
 ## Question 1: Positional Index  
 
