@@ -7,6 +7,18 @@
 
 ## Preprocessing Steps / How to Run the File 
 
+* Ensure the data is in a folder called “data” in the current working directory 
+
+* Run all the code in the order it appears 
+
+### For the Positional Index  
+
+* User will be prompted to enter a query 
+
+* If the query does not match the conditions, they will be prompted to enter a query again 
+
+* Results will be displayed
+
 ### To get the TF-IDF Matrix 
 
 * The user will be prompted to enter a query up to 5 words and select enter. 
@@ -128,7 +140,7 @@ The final output received after performing the above steps includes the TF-IDF m
 
  For this function we called the query vector and the term frequency inverted document frequency matrix from question 2.  
 
-1. The formula for calculating cosine similarity is Cosine Similarity = (A . B) / (||A|| * ||B||)  
+1. The formula for calculating cosine similarity is Cosine Similarity = $(A . B) / (||A|| * ||B||)$  
 
   * Where A represents the matrix for the query vector and B represents the matrix which includes the weights.  
 
@@ -157,6 +169,8 @@ In the final chunk of code for this question we output the following:
      * with the document ID and the cosine similarity scores that correspond to the files
        
      * with document names and the cosine similarity scores that correspond to the files
+   
+       
    
  ### For each scoring scheme, provide a report stating the pros and cons of using that particular scheme to determine document relevance. 
 
