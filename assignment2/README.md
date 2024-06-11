@@ -101,7 +101,7 @@ In the final chunk of code for this question we output the following:
 
 * Calculations using log are with base 10 
 
-* Given the formula for the Term Frequency weighting scheme,  f(t,d)/∑f(t`,d): ∑f(t`,d) = sum the frequencies of all other unique terms t′ in the document d, 	excluding the term t  
+* Given the formula for the Term Frequency weighting scheme,  $'f(t,d)/∑f(t',d): ∑f(t`,d) = sum'$ the frequencies of all other unique terms t′ in the document d, 	excluding the term t  
 
 ### Description of Outputs and Analysis Conducted
 
