@@ -79,14 +79,38 @@ In the final chunk of code for this question we output the following:
 
 ### Description of Outputs and Analysis Conducted
 
-## Question 2 - Cosine Similarity
+## Question 3 - Cosine Similarity
 
-### Methodology
+### Methodology 
 
-### Preprocessing Steps
+ For this function we called the query vector and the term frequency inverted document frequency matrix from question 2.  
 
+1. The formula for calculating cosine similarity is Cosine Similarity = (A . B) / (||A|| * ||B||)  
 
-### Assumptions
+  * Where A represents the matrix for the query vector and B represents the matrix which includes the weights.  
 
+  * Take the dot product of these values and divide by the product of each individual Euclidean distance  
 
-### Description of Outputs and Analysis Conducted
+2. Created a dictionary to set the document ID to the correct score from the formula 
+
+3. Created an array to get the top 5 documents for this method and return this 
+
+4. Using the user inputs from question 2 we call the cosine similarity function and return the corresponding documents 
+
+ 
+
+### Assumptions 
+
+ For this question, we assumed that the Term Frequency will be run first before calling the Cosine Similarity function. 
+
+  
+
+### Description of Outputs and Analysis Conducted 
+
+In the final chunk of code for this question we output the following:  
+ 
+  * Top 5 cosine list:
+    
+     * with the document ID and the cosine similarity scores that correspond to the files
+       
+     * with document names and the cosine similarity scores that correspond to the files  
