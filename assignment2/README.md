@@ -1,3 +1,10 @@
+# Text Retrieval and Search Engine (CP423)
+### Assignment 2
+### Group Members:
+* Abigail Lee
+* Kayleigh Habib
+* Myisha Chaudhry
+
 ## Preprocessing Steps / How to Run the File 
 
 ### To get the TF-IDF Matrix 
