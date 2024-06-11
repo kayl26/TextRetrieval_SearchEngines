@@ -122,6 +122,8 @@ In the final chunk of code for this question we output the following:
 
 ### Assumptions
 
+For this question we made a few assumptions:
+
 *  The query given by the user will be 5 words or less. 
 
 * Calculations using log are with base 10 
