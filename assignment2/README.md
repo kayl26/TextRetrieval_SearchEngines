@@ -1,6 +1,6 @@
 ## Preprocessing Steps / How to Run the File 
 
- # To get the TF-IDF Matrix 
+### To get the TF-IDF Matrix 
 
 * The user will be prompted to enter a query up to 5 words and select enter. 
 
