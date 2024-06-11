@@ -97,8 +97,17 @@ In the final chunk of code for this question we output the following:
 
 ### Assumptions
 
+*  The query given by the user will be 5 words or less. 
+
+* Calculations using log are with base 10 
+
+* Given the formula for the Term Frequency weighting scheme,  f(t,d)/∑f(t`,d): ∑f(t`,d) = sum the frequencies of all other unique terms t′ in the document d, 	excluding the term t  
 
 ### Description of Outputs and Analysis Conducted
+
+The final output received after performing the above steps includes the TF-IDF matrix which allows us to produce the top 5 relevant documents based on similarity scores and the chosen weightings. 
+
+ Using different weighting schemes to calculate term frequency (TF) in the TF-IDF matrix can have a significant impact on the results of text analysis and information retrieval tasks. In terms of processing times, it may take longer to process the Term Frequency (weight = 3) and the Double Normalization (weight 5) schemes as it must loop through the position_words dictionary which may contain a large amount of document keys and all the words in the documents to find the term frequency.  
 
 ## Question 3 - Cosine Similarity
 
