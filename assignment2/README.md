@@ -71,8 +71,31 @@ In the final chunk of code for this question we output the following:
 
 ### Methodology
 
-### Preprocessing Steps
+1. To begin this question, we applied the pre-processing steps from question 1.  
 
+2. Next, we created an empty matrix that would later become our TF-IDF Matrix. 
+
+* We set the dimensions of this matrix to have the number of rows equal the number of total documents. The number of columns equals the total number of words in all documents which we found through the positional index. 
+
+3. To populate the TF-IDF values in the matrix for each word in the vocabulary, we started by creating a function to apply the five different weighting schemes to calculate the term frequency. 
+
+* Binary (weight = 1): This tells us whether a word exists in a document or not. To calculate the term frequency we use the positional index dictionary to find the list of documents that contains the word. If the document ID is found in the dictionary, tf is set to 1, otherwise it is set to 0 meaning the word was not found in the document. 
+
+* Raw count (weight = 2): The raw count is the number of times a word appears in a document. To calculate the term frequency we use the positional index dictionary to find the list of documents that contains the word. If the document ID is found in the dictionary we take the value of the key, value pair which gives us the frequency of the word in that document. 
+
+* Term Frequency (weight = 3): This is the frequency of the word divided by the sum the frequencies of all other unique terms t′ in the document d, excluding the term t. To calculate the term frequency we take the raw count and divide that by the number of unique words found in the document subtracting 1 by using the position_words dictionary. 
+
+* Log Normalization (weight = 4): This is the log of the term frequency of the word in the document plus 1. To calculate this we take the log of the raw count + 1. 
+
+* Double Normalization (weight = 5): For this we need to find the highest term frequency in the document  (the number of the word that appears the most). To find this we loop through the position_words dictionary to and determine the frequency of each word in a document to determine the maximum number. We then take that value and the raw count and apply the formula: 0.5 + (0.5 x (raw_count / max)). 
+
+4. The query vector was created to determine whether the term exists in the current vocabulary list. If the word in the query is found in the vocabulary list, it will be flagged with a 1, but if it is not found the value will remain 0. 
+
+5. To calculate the TF-IDF score, we created a function called calc_tfidf which uses the formula IDF(word) = log(total number of documents / (document frequency (word) + 1)). From here this IDF value was multiplied by the TF-IDF value given by the weighting function. Another function called tf_idf_vals is called to aid in populating the TF-IDF Matrix. This function calls the tf_idf_matrix function to build a matrix with the number of rows being the number of documents, and the number of columns being the number of words in all documents. This function loops through the documents we have, as well as all words in the vocabulary list, and proceeds to call the calc_tfidf function. We then populate the matrix for the current document and word index with the calculated TF-IDF score. 
+
+Now using the TF-IDF Matrix we determine the top 5 relevant documents. We created a dictionary to help us store the key value pairs (docID and similarity score). We looped through the current TF-IDF Matrix to calculate the dot product using the query vector and each row in the matrix (which represents each document). Once all the dot product values were stored in the dictionary, we sorted by the values in descending order and indexed the top 5 to return the top 5 relevant documents. 
+
+6. To apply the 5 different weighting schemes for term frequency calculation, we allow user input of the query (up to 5 words) and their chosen weighting scheme (from 1-5). This will result in the tf_idf_matrix function to build the matrix and the tf_idf_vals function to populate the TF-IDF Matrix  with the TF-IDF scores in terms of the query and weighting scheme. This will result in the top 5 relevant documents and their respective TF-IDF scores. 
 
 ### Assumptions
 
